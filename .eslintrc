@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "root": true,
+  "extends": ["airbnb", "plugin:react/recommended"],
+  "globals": {
+    "document": true,
+    "alert": true
+  },
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "semi": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "global-require": "off",
+    "comma-dangle": "off",
+    "react/prop-types": "off",
+    "arrow-body-style": "off"
+  }
+}
