@@ -1,6 +1,5 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-// import Header from './header'
 
 const Home = () => {
   const history = useHistory()
@@ -10,7 +9,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Header /> */}
       <div className="flex flex-col items-center">
         <div className="my-11">
           Welcome to play, hope you will have a good time!
