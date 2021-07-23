@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -22,25 +22,25 @@ const Header = () => {
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow">
-          <a
-            href="/game"
+          <Link
+            to="/game"
             className="block mt-4 lg:inline-block lg:mt-0
             text-teal-lighter hover:text-white mr-4"
           >
             Start New Game
-          </a>
-          <a
-            href="/login"
+          </Link>
+          <Link
+            to="/login"
             className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white mr-4"
           >
             Log In
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white"
           >
             About This Game
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import Game from './game'
-import Header from './header'
+import App from './app'
 import './main.scss'
 
 const Main = () => {
   return (
     <div>
-      <Header />
-      <Game />
+      <App />
     </div>
-  )
+  );
 }
 ReactDOM.render(<Main />, document.getElementById('root'));
