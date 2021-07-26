@@ -41,15 +41,30 @@ const Header = () => {
           >
             About This Game
           </Link>
-          <Link
-            to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white lg:float-right"
-          >
-            Go Back
-          </Link>
+          <div className=" lg:float-right">
+            <Link
+              to="/"
+              className="inline-block mt-4 lg:mt-0 text-teal-lighter hover:text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M11 19l-7-7 7-7m8 14l-7-7 7-7"
+                />
+              </svg>
+              Go Back
+            </Link>
+          </div>
         </div>
       </div>
-
     </nav>
   );
 }
