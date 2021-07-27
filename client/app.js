@@ -6,12 +6,11 @@ import Root from './root'
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Header />
-        <Root />
-      </Router>
-    </div>
-  )
+    <Router>
+      <Header />
+      <Root />
+    </Router>
+
+  );
 }
 export default App

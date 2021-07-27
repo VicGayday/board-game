@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       <div className="flex flex-col items-center">
-        <div className="my-11">
+        <div className="my-11 font-bold">
           Welcome to play, hope you will have a good time!
         </div>
         <button

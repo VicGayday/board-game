@@ -11,12 +11,6 @@ const Game = ({ height = 5, width = 5 }) => {
       }
     })
   )
-
-  // const getUserScore = () => {
-  //   const score = gameField.filter((it) => it.state === 'user')
-  //   return score.length
-  // }
-
   const getRandomField = () => {
     const gameFieldFree = gameField.filter((it) => it.state === 'free')
     return gameFieldFree[Math.floor(Math.random() * gameFieldFree.length)].id
