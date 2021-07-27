@@ -26,6 +26,7 @@ const Game = ({ height = 5, width = 5 }) => {
   const [tid, setTid] = useState(null)
   const [computerScore, setComputerScore] = useState('')
   const [userScore, setUserScore] = useState('')
+  const [showScore, setShowScore] = useState(false)
 
   const updateState = (id, state) => {
     setGameField(
@@ -52,6 +53,9 @@ const Game = ({ height = 5, width = 5 }) => {
     setComputerScore(computerFields.length)
     const userFields = gameField.filter((it) => it.state === 'user')
     setUserScore(userFields.length)
+    if (computerFields.length || userFields.length > 0) {
+      setShowScore(true)
+    }
     if (computerFields.length > (width * height) / 2) {
       setSelected(null)
       alert('Computer wins')
@@ -94,12 +98,14 @@ const Game = ({ height = 5, width = 5 }) => {
             );
           })}
         </div>
-        <div>
-          Your score:
-          {userScore}
-          Computer score:
-          {computerScore}
-        </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="p-1 text-green-400 font-bold">{showScore && <div>Player score:</div>}</div>
+        <div className="p-1">{showScore && userScore}</div>
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="p-1 text-red-400 font-bold">{showScore && <div>Computer score:</div>}</div>
+        <div className="p-1">{showScore && computerScore}</div>
       </div>
     </div>
   );
