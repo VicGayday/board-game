@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Home = () => {
   const history = useHistory()
@@ -20,6 +20,7 @@ const Home = () => {
         >
           Start the game
         </button>
+        <Link to="/relaxgame">Play relax game</Link>
       </div>
     </div>
   );
