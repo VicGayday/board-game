@@ -35,6 +35,7 @@ const Game = ({ height = 5, width = 5 }) => {
     clearTimeout(tid)
   }
 
+  console.log(selected)
   const chooseNextRound = (selected2) => {
     const timeoutId = setTimeout(() => {
       updateState(selected2, 'computer')
