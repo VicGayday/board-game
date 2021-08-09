@@ -21,6 +21,13 @@ module.exports = {
       warning: false,
       errors: true,
     },
+    proxy: [
+      {
+        context: ['/auth', '/api'],
+        target: 'http://localhost:8080',
+        changeOrigin: true
+      },
+    ],
   },
   module: {
     rules: [

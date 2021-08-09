@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import { Redirect } from 'react-router-dom'
 import './game.scss'
 
 const Game = ({ height = 5, width = 5 }) => {
@@ -35,7 +34,6 @@ const Game = ({ height = 5, width = 5 }) => {
     clearTimeout(tid)
   }
 
-  console.log(selected)
   const chooseNextRound = (selected2) => {
     const timeoutId = setTimeout(() => {
       updateState(selected2, 'computer')
