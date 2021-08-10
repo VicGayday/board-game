@@ -1,4 +1,3 @@
-// import LoginForm from '../../client/login';
 import fetch from 'node-fetch'
 
 const UPDATE_LOGIN = 'UPDATE_LOGIN'

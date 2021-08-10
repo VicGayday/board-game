@@ -14,6 +14,7 @@ module.exports = {
     hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
     port: 8080,
+    disableHostCheck: true,
     historyApiFallback: true,
     host: 'localhost',
     index: 'index.html',
@@ -25,7 +26,11 @@ module.exports = {
       {
         context: ['/auth', '/api'],
         target: 'http://localhost:8080',
-        changeOrigin: true
+        secure: false,
+        changeOrigin: true,
+        headers: {
+          Connection: 'keep-alive',
+        },
       },
     ],
   },
